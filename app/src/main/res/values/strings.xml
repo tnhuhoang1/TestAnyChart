@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestChart</string>
+    <string name="chart_thumbnail">Chart thumbnail</string>
+    <string name="let_s_start">Let\'s start</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.tnh.testchart.fragments.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_chart_graph"
+            app:destination="@id/chart_graph" />
+    </fragment>
+    <navigation
+        android:id="@+id/chart_graph"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.tnh.testchart.fragments.HomeFragment"
+            android:label="HomeFragment" >
+            <action
+                android:id="@+id/action_homeFragment_to_chartViewerFragment"
+                app:destination="@id/chartViewerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/chartViewerFragment"
+            android:name="com.tnh.testchart.fragments.ChartViewerFragment"
+            android:label="ChartViewerFragment">
+            <argument android:name="chart_title"
+                app:argType="string"/>
+        </fragment>
+    </navigation>
+</navigation>
